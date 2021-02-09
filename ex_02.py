@@ -7,29 +7,30 @@ class Clothes(ABC):
         super().__init__()
 
     @abstractmethod
-    def coat(self):
-        pass
-
-    @abstractmethod
-    def suit(self):
+    def amount_of_fabric(self):
         pass
 
 
-class Amount(Clothes):
-    def __init__(self, v, h):
+class Cout(Clothes):
+    def __init__(self, v):
         super().__init__()
         self.v = v
-        self.h = h
 
-    def coat(self):
+    def amount_of_fabric(self):
         return round(self.v / 6.5 + 0.5, 2)
 
+class Suit(Clothes):
+    def __init__(self, h):
+        super().__init__()
+        self.h = h
+
     @property
-    def suit(self):
+    def amount_of_fabric(self):
         return round(self.h * 2 + 0.3, 2)
 
 
-b = Amount(87, 99)
+a = Cout(78)
+b = Suit(187)
 
-print(b.coat())
-print(b.suit)
+print(a.amount_of_fabric())
+print(b.amount_of_fabric)

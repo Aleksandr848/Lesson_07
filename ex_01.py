@@ -12,12 +12,11 @@ class Matrix():
         return Matrix(self.matrix)
 
 
-a = Matrix([[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6], [4, 5, 6, 7]])
+a = Matrix([[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]])
 print(a)
 print(' +')
-b = Matrix([[2, 4, 6, 8], [4, 6, 8, 10], [6, 8, 10, 12], [8, 10, 12, 14]])
+b = Matrix([[2, 4, 6, 8], [4, 6, 8, 10], [6, 8, 10, 12]])
 print(b)
 print(' =')
 m = a + b
 print(m)
-
